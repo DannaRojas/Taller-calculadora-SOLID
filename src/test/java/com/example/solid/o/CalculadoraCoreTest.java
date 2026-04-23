@@ -17,4 +17,16 @@ public class CalculadoraCoreTest {
         
         assertEquals(8, resultado.getValor());
     }
+
+    @Test
+    public void alEjecutarPotenciaConCalculadora_debeRetornarElResultadoCorrectoSinModificarCore() {
+        CalculadoraCore calculadora = new CalculadoraCore();
+        Operacion potencia = new Potencia();
+        Operando a = new Operando(2);
+        Operando b = new Operando(3);
+        
+        Operando resultado = calculadora.ejecutar(potencia, a, b);
+        
+        assertEquals(8, resultado.getValor());
+    }
 }
