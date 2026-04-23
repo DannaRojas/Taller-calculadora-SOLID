@@ -12,13 +12,13 @@ Al inicio, teníamos una única clase `CalculadoraSolid` que hacía absolutament
 
 ## Fase 1: Principio de Responsabilidad Única (SRP) 
 
-### 💬 Interacción / Prompt
+### Interacción / Prompt
 **Usuario:** "Fase 1: Principio de Responsabilidad Única (SRP) y DDD. Necesitamos separar la interfaz de usuario de la lógica de la Calculadora. Aplicando DDD, extrae las reglas de negocio de los números (ej. no permitir división por cero) en un Value Object llamado Operando. Dame primero los Test Unitarios."
 
-### 📖 Explicación
+### Explicación
 El principio SRP dicta que "una clase debe tener una, y solo una, razón para cambiar". Esto significa que cada pieza de código debe encargarse de una única responsabilidad conceptual.
 
-### 🛠️ ¿Cómo se diferenció del código anterior?
+### ¿Cómo se diferenció del código anterior?
 - **Antes:** La validación matemática estaba regada por toda la calculadora.
 - **Después:** Creamos el Value Object `Operando`. Ahora, la responsabilidad de saber si un número es válido para una raíz o una división vive única y exclusivamente dentro de `Operando`. Además, se extrajo el motor matemático a una clase aislada `CalculadoraCore`, desentendiéndose por completo de la consola.
 
